@@ -1,0 +1,181 @@
+/* Links styling */
+a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+a:hover {
+  color: #e80808;
+}
+
+/* Navigation bar */
+.navbar {
+  margin-top: 80px;
+  padding: 10px;
+  background-color: blanchedalmond;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Moving heading */
+.heading {
+  position: absolute;
+  top:0;
+  left:30%;
+  font-size: 40px;
+  text-decoration: underline;
+  text-transform: capitalize;
+  color: rgb(252, 74, 10);
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  /*animation: move-heading 8s linear infinite;*/
+}
+
+@keyframes move-heading {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Banner image */
+.slick-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Candidates grid */
+.candidates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  /* font-size: large; */
+}
+h5
+{
+  font-size: large;
+}
+/* Card styling */
+.card {
+  background-color: rgb(244, 246, 250);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(11, 7, 7, 0.1);
+  padding: 8px;
+  text-align: center;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  border-color: blue;
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img:hover {
+  box-shadow: 0 0 10px 4px rgb(255, 0, 0);
+  transform: scale(0.95);
+}
+
+/* Card body */
+.card_body {
+  background-color: coral;
+  padding: 5px;
+  border-bottom: 2px solid #000;
+}
+
+.card_body:hover {
+  box-shadow: 0 0 10px 4px rgb(255, 0, 0);
+  transform: scale(0.95);
+}
+
+.card_title {
+  font-family: cursive;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  text-shadow: 1px 0px  5px rgba(12, 70, 232, 0.8);
+}
+
+/* Vote button */
+.button {
+  padding: 8px 16px;
+  background-color: #5024ec;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.5rem auto;
+  display: block;
+}
+
+.card button:hover {
+  background-color: grey;
+  transform: scale(1.05);
+}
+
+.accepted {
+  background-color: green;
+  color: white;
+}
+
+/* Submit button */
+.submit {
+  display: block;
+  margin: 1rem auto;
+  padding: 10px 25px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit:hover {
+  background-color: #218838; 
+  transform: scale(1.05);
+}
+
+.submit:active {
+  background-color: #1e7e34;
+  transform: scale(0.98);
+}
+
+.submit:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* 📱 Mobile responsive fixes */
+@media (max-width: 600px) {
+  .heading {
+    font-size: 28px;
+  }
+  .navbar a {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  .card img {
+    width: 100px;
+    height: 100px;
+  }
+}
